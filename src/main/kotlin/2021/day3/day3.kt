@@ -16,19 +16,14 @@ fun main(){
     val epsilon = leastCommonBitBinRepresentation.toIntegerValue()
 
     val oxygenGenerator =
-        binNums.getRating(mostCommonBitsBinRepresentation, mostOrleast = true)
-            .toIntListBinRepresentation().toIntegerValue()
+        binNums.getRating(mostCommonBitsBinRepresentation, mostOrleast = true).first().toInt(2)
 
     val co2Scruber =
-        binNums.getRating(leastCommonBitBinRepresentation, mostOrleast = false).toIntListBinRepresentation()
-            .toIntegerValue()
+        binNums.getRating(leastCommonBitBinRepresentation, mostOrleast = false).first().toInt(2)
+
 
     println("Part1: ${gamma * epsilon}")
     println("Part2: ${oxygenGenerator * co2Scruber}")
-}
-
-fun List<String>.toIntListBinRepresentation():List<Int>{
-    return this.first().toList().map { numBinChar -> numBinChar.toString().toInt() }
 }
 
 fun List<String>.getRating(mostCommon: List<Int>, mostOrleast: Boolean): List<String>{
