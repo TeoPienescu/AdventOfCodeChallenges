@@ -1,0 +1,7 @@
+package day%d
+
+import getFile
+
+fun main(){
+    val input = getFile(%d)
+}
