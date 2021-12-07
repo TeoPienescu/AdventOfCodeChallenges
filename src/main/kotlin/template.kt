@@ -99,7 +99,7 @@ private suspend fun fetch(uri: String): String?{
 
 fun main(){
     try {
-        AOCTemplateBuilder.buildTemplate(6)
+        AOCTemplateBuilder.buildTemplate(7)
     }catch (error: IllegalStateException){
         println("Error: ${error.message}")
     }
