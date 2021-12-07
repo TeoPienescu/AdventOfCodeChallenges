@@ -23,8 +23,8 @@ fun main(){
 fun CrabPositions.getMinFuel(part1: Boolean, rangeOfDestPositions: IntRange): Int{
     return rangeOfDestPositions.fold(0){ acc, finalPos->
         val fuel = this.fold(0){accm, xPos ->
-            val absValueOfCrabPosAndDestPos = abs(xPos - finalPos)
-            accm + if(!part1) (0..absValueOfCrabPosAndDestPos).sum() else absValueOfCrabPosAndDestPos
+            val absValueOfCrabPosMinusDestPos = abs(xPos - finalPos)
+            accm + if(!part1) (0..absValueOfCrabPosMinusDestPos).sum() else absValueOfCrabPosMinusDestPos
         }
         if(acc!= 0 && acc < fuel) acc else fuel
     }
